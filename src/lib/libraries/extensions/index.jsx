@@ -38,6 +38,17 @@ import wedo2ConnectionTipIconURL from './wedo2/wedo-button-illustration.svg';
 import boostIconURL from './boost/boost.png';
 import boostInsetIconURL from './boost/boost-small.svg';
 
+import parrotMamboImage from './parrot_mambo.png';
+import djiTelloImage from './DJI_t_panel.png';
+import djiPhantom4Image from './dji_phantom4.png';
+import smartAgriIoTImage from './smart_agri_IoT.png';
+
+import dronePeripheralImage from './drone-illustration.svg';
+import parrotDroneMenuImage from './drone-parrot80.svg';
+import djiTelloMenuImage from './dji_t_80.svg';
+import djiDroneMenuImage from './drone-dji80.svg';
+import sweetDroneMenuImage from './drone-sweet80.svg';
+
 export default [
     {
         name: (
@@ -266,5 +277,45 @@ export default [
         disabled: true,
         bluetoothRequired: true,
         internetConnectionRequired: true
-    }
+    },
+    {
+        name: 'Parrot Drone Simulator',
+        extensionId: 'parrotMamboBlocks',
+        iconURL: parrotMamboImage,
+        insetIconURL: parrotDroneMenuImage,
+        description: 'ドローン（Parrot)を操作する。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: parrotDroneMenuImage,
+    },
+    {
+        name: 'DJI Tello Simulator',
+        extensionId: 'djiTelloBlocks',
+        iconURL: djiTelloImage,
+        insetIconURL: djiTelloMenuImage,
+        description: 'ドローン（DJI Tello)を操作する。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: djiTelloMenuImage,
+    },
+    {
+        name: 'DJI Drone Simulator',
+        extensionId: 'djiPhantom4Blocks',
+        iconURL: djiPhantom4Image,
+        insetIconURL: djiDroneMenuImage,
+        description: 'ドローン（DJI)を操作する。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: djiDroneMenuImage,
+    },
+    {
+        name: 'Smart Agri IoT',
+        extensionId: 'smartAgriIoTBlocks',
+        iconURL: smartAgriIoTImage,
+        insetIconURL: sweetDroneMenuImage,
+        description: 'ドローンで糖度測定を行う。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: sweetDroneMenuImage,
+    },
 ];

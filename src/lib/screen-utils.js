@@ -47,8 +47,28 @@ const getStageDimensions = (stageSize, isFullScreen) => {
         widthDefault: layout.standardStageWidth,
         height: 0,
         width: 0,
-        scale: 0
+        scale: 0,
+        scratchDisplay: "block",
+        droneDisplay: "none",
+        djiTelloDisplay: "none"
     };
+
+	stageDimensions.scratchDisplay = "none";
+	stageDimensions.droneDisplay = "none";
+	stageDimensions.djiTelloDisplay = "none";
+
+	switch(stageId)
+	{
+		case 1:		// Pallotドローン
+			stageDimensions.droneDisplay = "block";
+			break;
+		case 2:		// DJI Tello用
+			stageDimensions.djiTelloDisplay = "block";
+			break;
+		default:
+			stageDimensions.scratchDisplay = "block";
+			break;
+	}
 
     if (isFullScreen) {
         stageDimensions.height = window.innerHeight -

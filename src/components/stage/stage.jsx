@@ -59,10 +59,34 @@ const StageComponent = props => {
                     }}
                 >
                     <DOMElementRenderer
+                        id={"scratch_stage"}
+                        className={classNames(
+                            styles.stage,
+                            {[styles.stageOverlayContent]: isFullScreen}
+                        )}
                         domElement={canvas}
                         style={{
                             height: stageDimensions.height,
-                            width: stageDimensions.width
+                            width: stageDimensions.width,
+                            display: stageDimensions.scratchDisplay
+                        }}
+                        {...boxProps}
+                    />
+                    <Box
+                        id={"gameContainer_drone"}
+                        style={{
+                            height: stageDimensions.height,
+                            width: stageDimensions.width,
+                            display: stageDimensions.droneDisplay
+                        }}
+                        {...boxProps}
+                    />
+                    <Box
+                        id={"djiTello_drone"}
+                        style={{
+                            height: stageDimensions.height,
+                            width: stageDimensions.width,
+                            display: stageDimensions.djiTelloDisplay
                         }}
                         {...boxProps}
                     />

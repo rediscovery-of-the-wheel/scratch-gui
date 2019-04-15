@@ -14,7 +14,45 @@
         </script>
         <!-- /Sentry -->
     <% } %>
+    <script src="static/WebGL/UnityLoader.js"></script>
+    <script src="static/dji_tello/UnityLoader.js"></script>
+    <script>
+		var stageId = 0;
+		var gameInstance = null;
+		var djiTelloInstance = null;
+    </script>
+	<script>
+		function changeStage( stageId )
+		{
+			var stageScratch = document.getElementById('scratch_stage');
+			var stageDrone = document.getElementById('gameContainer_drone');
+			var stageDjiTello = document.getElementById('djiTello_drone');
+
+			stageScratch.style.display = "none";
+			stageDrone.style.display = "none";
+			stageDjiTello.style.display = "none";
+
+			switch(stageId)
+			{
+				case 1:
+					stageDrone.style.display = "block";
+					break;
+				case 2:
+					stageDjiTello.style.display = "block";
+					break;
+				default:
+					stageScratch.style.display = "block";
+					stageScratch.height = "360";
+					stageScratch.width = "480";
+					break;
+			}
+		}
+	</script>
   </head>
   <body>
+<a href="./static/sample/sample01_Line.sb3" id="sfSample1" download onclick="this.parentNode.setAttribute('target', '_blank');"></a>
+<a href="./static/sample/sample02_Square.sb3" id="sfSample2" download onclick="this.parentNode.setAttribute('target', '_blank');"></a>
+<a href="./static/sample/sample03_Eight.sb3" id="sfSample3" download onclick="this.parentNode.setAttribute('target', '_blank');"></a>
+<a href="./static/sample/sample04_3D_Donut.sb3" id="sfSample4" download onclick="this.parentNode.setAttribute('target', '_blank');"></a>
   </body>
 </html>

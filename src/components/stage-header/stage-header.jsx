@@ -63,6 +63,38 @@ const StageHeaderComponent = function (props) {
 
     let header = null;
 
+
+	var obj;
+
+	switch(stageId)
+	{
+		case 1:
+			obj = document.getElementById("gameContainer_drone");
+			break;
+		case 2:
+			obj = document.getElementById("djiTello_drone");
+			break;
+		default:
+			obj = null;
+			break;
+	}		
+
+	if(null != obj)
+	{
+		obj = obj.getElementsByTagName('canvas')[0];
+	
+		if(isFullScreen)
+		{
+			obj.style.height = "100%";
+			obj.style.width = "100%";
+		}
+		else
+		{
+			obj.style.height = "360px";
+			obj.style.width = "480px";
+		}
+	}
+
     if (isFullScreen) {
         const stageDimensions = getStageDimensions(null, true);
         const stageButton = showBranding ? (

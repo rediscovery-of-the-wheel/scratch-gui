@@ -154,7 +154,11 @@ class MenuBar extends React.Component {
             'handleLanguageMouseUp',
             'handleRestoreOption',
             'handleSaveToComputer',
-            'restoreOptionMessage'
+            'restoreOptionMessage',
+            'handleClickSample1',
+            'handleClickSample2',
+            'handleClickSample3',
+            'handleClickSample4'
         ]);
     }
     componentDidMount () {
@@ -163,6 +167,23 @@ class MenuBar extends React.Component {
     componentWillUnmount () {
         document.removeEventListener('keydown', this.handleKeyPress);
     }
+	handleClickSample1(){
+	    let link = document.getElementById('sfSample1');
+	    link.click();
+	}
+	handleClickSample2(){
+	    let link = document.getElementById('sfSample2');
+	    link.click();
+	}
+	handleClickSample3(){
+	    let link = document.getElementById('sfSample3');
+	    link.click();
+	}
+	handleClickSample4(){
+	    let link = document.getElementById('sfSample4');
+	    link.click();
+	}
+
     handleClickNew () {
         let readyToReplaceProject = true;
         // if the project is dirty, and user owns the project, we will autosave.
@@ -422,6 +443,28 @@ class MenuBar extends React.Component {
                                             />
                                         </MenuItem>
                                     )}</SB3Downloader>
+                                </MenuSection>
+                                <MenuSection>
+                                    <MenuItem
+                                        onClick={this.handleClickSample1}
+                                    >
+                                        {"サンプルダウンロード（直進）"}
+                                    </MenuItem>
+                                    <MenuItem
+                                        onClick={this.handleClickSample2}
+                                    >
+                                        {"サンプルダウンロード（四角形）"}
+                                    </MenuItem>
+                                    <MenuItem
+                                        onClick={this.handleClickSample3}
+                                    >
+                                        {"サンプルダウンロード（八の字）"}
+                                    </MenuItem>
+                                    <MenuItem
+                                        onClick={this.handleClickSample4}
+                                    >
+                                        {"サンプルダウンロード（3Dドーナツ）"}
+                                    </MenuItem>
                                 </MenuSection>
                             </MenuBarMenu>
                         </div>
