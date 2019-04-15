@@ -16,6 +16,10 @@ import text2speechImage from './text2speech.png';
 import text2speechInsetImage from './text2speech-small.svg';
 import makeymakeyImage from './makeymakey.png';
 import makeymakeyInsetImage from './makeymakey-small.svg';
+import parrotMamboImage from './parrot_mambo.png';
+import djiTelloImage from './DJI_t_panel.png';
+import djiPhantom4Image from './dji_phantom4.png';
+import smartAgriIoTImage from './smart_agri_IoT.png';
 
 import microbitPeripheralImage from './peripheral-connection/microbit/microbit-illustration.svg';
 import microbitMenuImage from './peripheral-connection/microbit/microbit-small.svg';
@@ -24,6 +28,12 @@ import ev3MenuImage from './peripheral-connection/ev3/ev3-small.svg';
 import wedoPeripheralImage from './peripheral-connection/wedo/wedo-illustration.svg';
 import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
+import dronePeripheralImage from './drone-illustration.svg';
+import parrotDroneMenuImage from './drone-parrot80.svg';
+import djiTelloMenuImage from './dji_t_80.svg';
+import djiDroneMenuImage from './drone-dji80.svg';
+import sweetDroneMenuImage from './drone-sweet80.svg';
+
 
 export default [
     {
@@ -233,5 +243,45 @@ export default [
         ),
         helpLink: 'https://scratch.mit.edu/wedo'
 
-    }
+    },
+    {
+        name: 'Parrot Drone Simulator',
+        extensionId: 'parrotMamboBlocks',
+        iconURL: parrotMamboImage,
+        insetIconURL: parrotDroneMenuImage,
+        description: 'ドローン（Parrot)を操作する。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: parrotDroneMenuImage,
+    },
+    {
+        name: 'DJI Tello Simulator',
+        extensionId: 'djiTelloBlocks',
+        iconURL: djiTelloImage,
+        insetIconURL: djiTelloMenuImage,
+        description: 'ドローン（DJI Tello)を操作する。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: djiTelloMenuImage,
+    },
+    {
+        name: 'DJI Drone Simulator',
+        extensionId: 'djiPhantom4Blocks',
+        iconURL: djiPhantom4Image,
+        insetIconURL: djiDroneMenuImage,
+        description: 'ドローン（DJI)を操作する。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: djiDroneMenuImage,
+    },
+    {
+        name: 'Smart Agri IoT',
+        extensionId: 'smartAgriIoTBlocks',
+        iconURL: smartAgriIoTImage,
+        insetIconURL: sweetDroneMenuImage,
+        description: 'ドローンで糖度測定を行う。',
+        featured: true,
+        peripheralImage: dronePeripheralImage,
+        smallPeripheralImage: sweetDroneMenuImage,
+    },
 ];
