@@ -38,16 +38,17 @@ import wedo2ConnectionTipIconURL from './wedo2/wedo-button-illustration.svg';
 import boostIconURL from './boost/boost.png';
 import boostInsetIconURL from './boost/boost-small.svg';
 
-import parrotMamboImage from './parrot_mambo.png';
-import djiTelloImage from './DJI_t_panel.png';
-import djiPhantom4Image from './dji_phantom4.png';
-import smartAgriIoTImage from './smart_agri_IoT.png';
+import dronePeripheralImage from './drone_simulator/drone-illustration.svg';
 
-import dronePeripheralImage from './drone-illustration.svg';
-import parrotDroneMenuImage from './drone-parrot80.svg';
-import djiTelloMenuImage from './dji_t_80.svg';
-import djiDroneMenuImage from './drone-dji80.svg';
-import sweetDroneMenuImage from './drone-sweet80.svg';
+import parrotMamboImage from './drone_simulator/parrot_mambo/parrot_mambo.png';
+import djiTelloImage from './drone_simulator/dji_tello/DJI_t_panel.png';
+import djiPhantom4Image from './drone_simulator/dji_phantom4/dji_phantom4.png';
+import smartAgriIoTImage from './drone_simulator/smart_agri/smart_agri_IoT.png';
+
+import parrotDroneMenuImage from './drone_simulator/parrot_mambo/drone-parrot80.svg';
+import djiTelloMenuImage from './drone_simulator/dji_tello/dji_t_80.svg';
+import djiDroneMenuImage from './drone_simulator/dji_phantom4/drone-dji80.svg';
+import sweetDroneMenuImage from './drone_simulator/smart_agri/drone-sweet80.svg';
 
 export default [
     {
